@@ -1,4 +1,9 @@
-$(document).ready(function(){	
+$(document).ready(function(){
+
+    var isDesktop = false,
+        isTablet = false,
+        isMobile = false;
+
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
@@ -10,6 +15,20 @@ $(document).ready(function(){
         } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
+        }
+
+        if( myWidth > 1024 ){
+            isDesktop = true;
+            isTablet = false;
+            isMobile = false;
+        }else if( myWidth > 767 ){
+            isDesktop = false;
+            isTablet = true;
+            isMobile = false;
+        }else{
+            isDesktop = false;
+            isTablet = false;
+            isMobile = true;
         }
     }
     $(window).resize(resize);
@@ -41,51 +60,62 @@ $(document).ready(function(){
     }
     $.fn.placeholder();
 
-    // $(".b-step-slider").slick({
-    //     dots: true,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     infinite: true,
-    //     cssEase: 'ease', 
-    //     speed: 500,
-    //     arrows: true,
-    //     prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-    //     nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
-    //     touchThreshold: 100
-    // });
+    $(".b-4-tab-item").on('click', function(){
+        if (!$(this).hasClass('active')) {
+            $('.b-4-right-item').each(function(){
+                $(this).hide();
+            });
 
-    // // Первая анимация элементов в слайде
-    // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
+            $('.b-4-tab-item').each(function(){
+                $(this).removeClass('active');
+            })
 
-    // // Кастомные переключатели (тумблеры)
-    // $(".b-step-slider").on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    //     $(".b-step-tabs li.active").removeClass("active");
-    //     $(".b-step-tabs li").eq(nextSlide).addClass("active");
-    // });
+            $(this).addClass('active');
+            $($(this).attr('href')).show();
+        }
 
-    // // Анимация элементов в слайде
-    // $(".b-step-slider").on('afterChange', function(event, slick, currentSlide, nextSlide){
-    //     $(".b-step-slide .slider-anim").removeClass("show");
-    //     $(".b-step-slide[data-slick-index='"+currentSlide+"'] .slider-anim").addClass("show");
-    // });
+        return false;
+    });
 
+    if($(".sticky").length && isDesktop){
+        var elements = document.querySelectorAll('.sticky');
+        Stickyfill.add(elements);
+    }
 
-    
-	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
- //    var myOptions = {
- //        zoom: 16,
- //        center: myPlace,
- //        mapTypeId: google.maps.MapTypeId.ROADMAP,
- //        disableDefaultUI: true,
- //        scrollwheel: false,
- //        zoomControl: true
- //    }
- //    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
-
- //    var marker = new google.maps.Marker({
-	//     position: myPlace,
-	//     map: map,
-	//     title: "Ярмарка вакансий и стажировок"
-	// });
+    $(".b-4-right-top").each(function() {
+        $(this).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            cssEase: 'ease', 
+            speed: 600,
+            arrows: true,
+            dots: false,
+            prevArrow: '<div class="slick-arrow icon-arrow-left"></div>',
+            nextArrow: '<div class="slick-arrow icon-arrow-right"></div>',
+        });
+    });
 
 });
+
+function yandexMapInit (ymaps) {
+    if(document.getElementById("b-contacts-map")){
+        var myMap = new ymaps.Map("b-contacts-map", {
+            center: [56.498310, 84.943989],
+            zoom: 16
+        });
+        myPlacemark = new ymaps.Placemark([56.498310, 84.943989], {}, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            // iconImageHref: '/local/templates/main/html/i/map-mark.svg',
+            // // Размеры метки.
+            // iconImageSize: [42, 60],
+            // // Смещение левого верхнего угла иконки относительно
+            // // её "ножки" (точки привязки).
+            // iconImageOffset: [-21, -60]
+        });
+        myMap.geoObjects.add(myPlacemark)
+    }
+}
