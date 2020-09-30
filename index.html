@@ -15,9 +15,6 @@
 	<link rel="stylesheet" href="css/slick.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 
-	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px)" href="css/layout-tablet.css">
-	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css">
-
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 </head>
 <body>
@@ -27,10 +24,10 @@
 			<div class="b-header-top clearfix">
 				<a href="/" class="b-logo"></a>
 				<ul class="b-header-menu">
-					<li><a href="#about">О нас</a></li>
-					<li><a href="#projects">Проекты</a></li>
-					<li><a href="#team">Команда</a></li>
-					<li><a href="#contacts">Контакты</a></li>
+					<li><a href="#" class="b-go" data-block=".b-1">О нас</a></li>
+					<li><a href="#" class="b-go" data-block=".b-2">Проекты</a></li>
+					<li><a href="#" class="b-go" data-block=".b-team">Команда</a></li>
+					<li><a href="#" class="b-go" data-block=".b-contacts">Контакты</a></li>
 				</ul>
 				<div class="b-header-right clearfix">
 					<a href="tel:+79528837345" class="b-phone-link">8 (952) 883-73-45</a><br>
@@ -74,21 +71,21 @@
 						<div class="b-4-right-top">
 							<div class="b-4-slide" style="background-image: url('i/project-1.jpg');">
 								<div class="b-4-video">
-									<div class="b-play">
+									<a href="https://www.youtube.com/watch?v=5yx6BWlEVcY" class="b-play" data-fancybox>
 										<div class="video-circle">
 											<div class="video-play"></div>
 										</div>
-									</div>
+									</a>
 								</div>
 								<h3>«Право на помощь 111»</h3>
 							</div>
 							<div class="b-4-slide" style="background-image: url('i/project-1.jpg');">
 								<div class="b-4-video">
-									<div class="b-play">
+									<a href="https://www.youtube.com/watch?v=5yx6BWlEVcY" class="b-play" data-fancybox>
 										<div class="video-circle">
 											<div class="video-play"></div>
 										</div>
-									</div>
+									</a>
 								</div>
 								<h3>«Право на помощь 222»</h3>
 							</div>
@@ -123,7 +120,7 @@
 					<div class="b-post">Директор «PRO DEO»</div>
 					<h3>Ивлев Иван Всеволодович</h3>
 					<div class="b-team-line"></div>
-					<p>Окончил Национальный исследовательский Томский государственный Университет по специальности юрист, а также Томский экономико-юридический институт по специальности экономист.</p>
+					<p>Окончил Национальный исследовательский Томский государственный Университет по специальности юрист, а также Томский экономико&nbsp;-юридический институт по специальности экономист.</p>
 				</div>
 				<div class="b-team-item">
 					<div class="b-img" style="background-image: url('i/review-2.jpg');"></div>
@@ -149,15 +146,18 @@
 				<h2>Контакты</h2>
 				<div class="b-contacts-item">
 					<p>Предварительная запись по телефону:</p>
-					<a href="tel:+78002019968" class="with-icon icon-phone"><b>8 (800) 201-99-68</b></a>
+					<a href="tel:+78002019968" class="with-icon"><span class="icon icon-phone"></span><b>8 (800) 201-99-68</b></a>
 				</div>
 				<div class="b-contacts-item">
 					<p>Прием по адресу:</p>
-					<div class="b-contacts-address with-icon icon-phone"><b>г. Томск, ул. Карла Маркса, д. 48/1, оф. 223</b></div>
+					<div class="b-contacts-address with-icon"><span class="icon icon-tip"></span><b>г. Томск, ул. Карла Маркса, д. 48/1, оф. 223</b></div>
 				</div>
 				<div class="b-contacts-item">
 					<p>Прием по адресу:</p>
-					<div class="b-contacts-address with-icon icon-phone"><b>по будням с 9:00 до 18:00, сб/вс – выходной</b></div>
+					<div class="b-contacts-address with-icon"><span class="icon icon-tip"></span><b>по будням с 9:00 до 18:00, сб/вс – выходной</b></div>
+				</div>
+				<div class="b-contacts-item">
+					<div class="b-contacts-email with-icon"><span class="icon icon-mail"></span><a href="mailto:law.tomsk@mail.ru" class="with-border">law.tomsk@mail.ru</a></div>
 				</div>
 			</div>
 			<div class="b b-contacts-right">
@@ -167,11 +167,11 @@
 	</div>
 
 	<div class="b-footer b-gray">
-		<div class="b-block">
-			<div class="b-footer-top clearfix">
+		<div class="b-footer-top clearfix">
+			<div class="b-block">
 				<div class="b-footer-top-left">
 					<a href="/" class="b-logo"></a>
-					<div class="b-footer-top-address">г. Томск, ул. Карла Маркса, д. 48/1, оф. 223</div>
+					<div class="b-footer-top-address"><span class="icon-tip"></span>г. Томск, ул. Карла Маркса, д. 48/1, оф. 223</div>
 					<ul class="b-social">
 						<li>
 							<a href="https://vk.com/" target="_blank" class="icon-vk">Вконтакте</a>
@@ -186,19 +186,22 @@
 						<a href="tel:+79528837345" class="b-phone-link">8 (952) 883-73-45</a><br>
 						<span>по будням с 9:00 до 18:00</span>
 					</div>
-					<a href="mailto:law.tomsk@mail.ru">law.tomsk@mail.ru</a>
+					<a href="mailto:law.tomsk@mail.ru" class="email">law.tomsk@mail.ru</a>
 				</div>
 			</div>
-			<div class="b-footer-bottom clearfix">
+		</div>
+		<div class="b-footer-bottom clearfix">
+			<div class="b-block">
 				<div class="b-footer-bottom-left">
 					<div class="b-copyright">© АНО «Юридическая Служба «Pro Deo», 2020. Все права защищены.</div>
-					<a href="/policy.pdf">Политика конфиденциальности</a>
+					<a href="/policy.pdf" class="with-border">Политика конфиденциальности</a>
 				</div>
 				<div class="b-redder">
 					<span>Разработка сайта:</span>
 					<a href="//redder.pro/" class="b-redder-logo" target="_blank"></a>
 				</div>
 			</div>
+		</div>
 		</div>
 	</div>
 	
