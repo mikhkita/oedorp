@@ -76,7 +76,12 @@ $(document).ready(function(){
             $(".b-4-right-top").each(function() {
                 $(this).slick('setPosition');
             });
-            
+
+            if(isMobile){
+                $("body, html").animate({
+                    scrollTop : $(".b-4-right").offset().top
+                }, 800);
+            }
         }
 
         return false;

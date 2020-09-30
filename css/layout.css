@@ -579,6 +579,7 @@ h3{
 							}
 						.b-4-slide h3{
 							position: absolute;
+							width: calc(100% - 40px);
 							left: 30px;
 							bottom: 40px;
 							font-size: 32px;
@@ -1104,7 +1105,7 @@ h3{
 	}
 	.b-4-right .slick-arrow.icon-arrow-left,
 	.b-4-right .slick-arrow.icon-arrow-right{
-		top: 172px;
+		top: calc(50% - 24px);
 	    height: 28px;
 	    width: 17px;
 		opacity: 1;
@@ -1112,6 +1113,10 @@ h3{
 	.b-4-right .slick-arrow.icon-arrow-left:before,
 	.b-4-right .slick-arrow.icon-arrow-right:before{
 		font-size: 28px;
+	}
+	.b-4-right-top {
+	    height: 50vw;
+	    min-height: 230px;
 	}
 
 	.b-4-slide h3 {
@@ -1141,6 +1146,9 @@ h3{
 	.b-team-item:nth-child(2n){
 		margin-right: 0;
 	}
+	.b-team-item .b-img {
+	    height: calc((100vw - 72px) / 2 * 1.15);
+	}
 	.b-team-item h3 {
 	    margin-bottom: 18px;
 	}
@@ -1152,7 +1160,17 @@ h3{
 	    padding: 208px 20px 253px;
 	}
 
+	.fancybox-slide{
+		padding: 20px;
+	}
+
 	@media screen and (max-width: 665px){
+		.b-header-top {
+		    margin-bottom: 100px;
+		}
+		.b-header-content {
+		    padding-bottom: 130px;
+		}
 		.b-footer-top-left,
 		.b-footer-top-right{
 			float: none;
@@ -1164,21 +1182,46 @@ h3{
 		.b-footer-top-right .b-header-right{
 			text-align: left;
 		}
+		.b-4-slide h3 {
+		    bottom: 20px;
+		    font-size: 18px;
+		    line-height: 24px;
+		}
 	}
 
 	@media screen and (max-width: 520px){
-		.b-header-right {
-			margin-top: 18px;
-		    float: none;
-		    text-align: left;
+		.b-logo {
+		    width: 150px;
+		    height: 24px;
+		    margin-right: 16px;
+			margin-top: 0;
+		}
+		.b-header-right span {
+		    display: none;
+		}
+		.b-header-right .b-phone-link {
+		    font-size: 16px;
+		    line-height: 20px;
+		    margin-top: 5px;
 		}
 		.b-team-item{
 			width: 100%;
 			margin-bottom: 32px;
 			margin-right: 0;
 		}
+		.b-team-item .b-img {
+		    height: calc((100vw - 40px) * 1.15);
+		}
 	}
 	@media screen and (max-width: 374px){
+		.b-header-right {
+			margin-top: 18px;
+		    float: none;
+		    text-align: left;
+		}
+		.b-header-right .b-phone-link {
+		    margin-top: 0;
+		}
 		.b-header-content h1 {
 		    font-size: 28px;
 		    line-height: 36px;
