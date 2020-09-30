@@ -72,6 +72,11 @@ $(document).ready(function(){
 
             $(this).addClass('active');
             $($(this).attr('href')).show();
+
+            $(".b-4-right-top").each(function() {
+                $(this).slick('setPosition');
+            });
+            
         }
 
         return false;
@@ -102,7 +107,8 @@ function yandexMapInit (ymaps) {
     if(document.getElementById("b-contacts-map")){
         var myMap = new ymaps.Map("b-contacts-map", {
             center: [56.498310, 84.943989],
-            zoom: 16
+            zoom: 16,
+            controls: ['default']
         });
         myPlacemark = new ymaps.Placemark([56.498310, 84.943989], {}, {
             // Опции.
