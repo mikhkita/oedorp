@@ -80,7 +80,7 @@ $(document).ready(function(){
             if(isMobile){
                 $("body, html").animate({
                     scrollTop : $(".b-4-right").offset().top
-                }, 800);
+                }, 400);
             }
         }
 

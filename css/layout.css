@@ -994,6 +994,9 @@ h3{
 		margin-bottom: 40px;
 	}
 
+	.b-header {
+	    min-height: 100vh;
+	}
 	.b-header-content{
 		color: #FFF;
 		padding-bottom: 320px;
@@ -1128,7 +1131,7 @@ h3{
 	    color: #FFF;
 	}
 	.b-4-right-content {
-	    padding: 24px 20px;
+	    padding: 20px;
 	}
 	.b-4-right-content h3 {
 	    font-size: 20px;
@@ -1166,10 +1169,10 @@ h3{
 
 	@media screen and (max-width: 665px){
 		.b-header-top {
-		    margin-bottom: 100px;
+		    margin-bottom: 90px;
 		}
 		.b-header-content {
-		    padding-bottom: 130px;
+		    padding-bottom: 110px;
 		}
 		.b-footer-top-left,
 		.b-footer-top-right{
@@ -1191,13 +1194,13 @@ h3{
 
 	@media screen and (max-width: 520px){
 		.b-logo {
-		    width: 150px;
-		    height: 24px;
-		    margin-right: 16px;
+		    width: 145px;
+		    height: 23px;
+		    margin-right: 12px;
 			margin-top: 0;
 		}
-		.b-header-right span {
-		    display: none;
+		.b-header .b-header-right span {
+		    font-size: 12px;
 		}
 		.b-header-right .b-phone-link {
 		    font-size: 16px;
