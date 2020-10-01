@@ -528,6 +528,12 @@ h3{
 				.b-4-right-content{
 					padding: 25px 29px;
 				}
+					.b-4-right-content a{
+						text-decoration: underline;
+					}
+						.b-4-right-content a:hover{
+							text-decoration: none;
+						}
 					.b-4-slide{
 						position: relative;
 						width: 100%;

@@ -77,11 +77,11 @@ $(document).ready(function(){
                 $(this).slick('setPosition');
             });
 
-            if(isMobile){
+            // if(isMobile){
                 $("body, html").animate({
-                    scrollTop : $(".b-4-right").offset().top
+                    scrollTop : $(".b-4-right").offset().top-( (isMobile)?0:40 )
                 }, 400);
-            }
+            // }
         }
 
         return false;
