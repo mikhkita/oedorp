@@ -803,7 +803,7 @@ body{
 		}
 			.b-footer-top-right .b-header-right{
 				float: none;
-				margin-bottom: 16px;
+				margin-bottom: 14px;
 			}
 				.b-footer-top-right .b-header-right .b-phone-link{
 					color: #000;
@@ -816,6 +816,11 @@ body{
 			}
 			.b-footer-top-right .email:hover{
 				text-decoration: none;
+			}
+			.b-footer-top-right .docs{
+				display: inline-block;
+				margin-top: 12px;
+				line-height: 20px;
 			}
 	.b-footer-bottom{
 		padding: 36px 0;
