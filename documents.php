@@ -31,10 +31,6 @@ require_once("header.php");
 						<a href="i/docs/Svidetelstvo_o_gosudarstvennoi_774_registratsii_nekomercheskoi_774_organizatsii.pdf" target="_blank">Свидетельство о государственной регистрации некомерческой организации</a>
 					</div>
 					<div class="b-document-item">
-						<div class="b-img doc"></div>
-						<a href="#" target="_blank">Свидетельство о государственной регистрации некомерческой организации</a>
-					</div>
-					<div class="b-document-item">
 						<div class="b-img pdf"></div>
 						<a href="i/docs/Svidetelstvo_o_postanovke_na_uchet_v_nalogovom_organe.pdf" target="_blank">Свидетельство о постановке на учет в налоговом органе</a>
 					</div>
@@ -44,7 +40,7 @@ require_once("header.php");
 					</div>
 					<div class="b-document-item">
 						<div class="b-img pdf"></div>
-						<a href="#" target="_blank">Свидетельство о государственной регистрации некомерческой организации</a>
+						<a href="i/docs/Soobschenie_v_Ministerstvo_yustitsii_RF_o_prodolzhenii_deyatelnosti.pdf" target="_blank">Сообщение в Министерство юстиции РФ о продолжении деятельности</a>
 					</div>
 				</div>
 			</div>
