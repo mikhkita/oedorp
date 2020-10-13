@@ -901,7 +901,7 @@ body{
 
 }
 	.b-document-list{
-		margin-bottom: 54px;
+		margin-bottom: 34px;
 	}
 		.b-document-item{
 			display: inline-block;
@@ -937,6 +937,11 @@ body{
 			.b-document-item a:hover{
 				text-decoration: underline;
 			}
+
+.b-documents-text{
+	max-width: 730px;
+	margin: 0 auto 100px auto;
+}
 
 /* ===== tablet ===== */
 
@@ -1100,7 +1105,7 @@ body{
 @media screen and (max-width: 900px){
 
 	.b-document-list{
-		margin-bottom: 30px;
+		margin-bottom: 16px;
 	}
 		.b-document-item{
 			width: calc(100%/2 - 20px);
@@ -1308,6 +1313,10 @@ body{
 
 	.fancybox-slide{
 		padding: 20px;
+	}
+
+	.b-documents-text{
+		margin: 0 auto 60px auto;
 	}
 
 }
