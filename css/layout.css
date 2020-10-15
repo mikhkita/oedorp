@@ -1406,17 +1406,16 @@ body{
 	    font-size: 20px;
 	}
 	.b-1-years-item .content {
-	    margin-left: 74px;
-	    padding: 16px 16px;
+	    margin-left: 72px;
+	    padding: 16px 12px;
 	}
 	.b-1-years:before {
 	    left: 26px;
 	    height: 70%;
 	}
-	.b-text ul li {
-	    padding-left: 18px;
-	    font-size: 14px;
-	    line-height: 22px;
+
+	.b-1-top {
+	    margin: 0 auto 50px auto;
 	}
 
 }
@@ -1487,6 +1486,14 @@ body{
 	}
 	.b-document-item a {
 	    width: calc(100% - 92px);
+	}
+	.b-text ul li {
+	    padding-left: 18px;
+	    font-size: 14px;
+	    line-height: 22px;
+	}
+	.b-text ul li:before {
+	    top: 9px;
 	}
 }
 @media screen and (max-width: 374px){
