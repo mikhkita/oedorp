@@ -1398,6 +1398,27 @@ body{
 		margin: 0 auto 60px auto;
 	}
 
+	.b-1-years-item .year {
+		top: calc(50% - 44px);
+	    width: 62px;
+	    text-align: left;
+	    padding: 16px 0;
+	    font-size: 20px;
+	}
+	.b-1-years-item .content {
+	    margin-left: 74px;
+	    padding: 16px 16px;
+	}
+	.b-1-years:before {
+	    left: 26px;
+	    height: 70%;
+	}
+	.b-text ul li {
+	    padding-left: 18px;
+	    font-size: 14px;
+	    line-height: 22px;
+	}
+
 }
 
 @media screen and (max-width: 665px){
