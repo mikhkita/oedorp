@@ -225,6 +225,28 @@ h3{
 	border-bottom: 2px solid transparent;
 }
 
+.b-text ul{
+    list-style: none;
+}
+	.b-text ul li{
+		position: relative;
+		padding-left: 22px;
+		line-height: 26px;
+		margin-bottom: 12px;
+	}
+	.b-text ul li:last-child{
+		margin-bottom: 0;
+	}
+	.b-text ul li:before {
+		content: " ";
+	    position: absolute;
+	    top: 11px;
+	    left: 0;
+	    width: 10px;
+		height: 2px;
+		background-color: #D8232A;
+	}
+
 /* ===== Прижать футер ===== */
 
 html{
@@ -385,15 +407,69 @@ body{
 }
 
 .b-1{
-	margin-top: 88px;
+	padding-top: 88px;
 }
-	.b-1-cont{
-		text-align: center;
+	.b-1-top{
+		margin: 0 auto 66px auto;
+		line-height: 26px;
+		max-width: 883px;
 	}
-		.b-1-cont h2{
-			padding: 308px 0 353px;
+	.b-1-years{
+		position: relative;
+	}
+		.b-1-years:before {
+		    position: absolute;
+		    content: "s";
+		    font-size: 0px;
+		    width: 5px;
+		    height: 73%;
+		    left: 90px;
+		    top: 70px;
+		    background-color: #EBEBEB;
+		}
+		.b-1-years-item{
+			position: relative;
+			margin-bottom: 40px;
+		}
+		.b-1-years-item:last-child{
 			margin-bottom: 0;
 		}
+			.b-1-years-item .year{
+				position: absolute;
+				top: calc(50% - 60px);
+				width: 188px;
+				text-align: center;
+				padding: 32px 0;
+				background-color: #FFF;
+				font-size: 45px;
+				line-height: 55px;
+				font-family: 'Geometria-Bold';
+			}
+			.b-1-years-item .content{
+				position: relative;
+				margin-left: 188px;
+				background-color: #F2F2F2;
+   				padding: 26px 32px 24px;
+				border-radius: 3px;
+			}
+			.b-1-years-item .content:before {
+			    position: absolute;
+			    content: "s";
+			    font-size: 0px;
+			    width: 0px;
+			    height: 0px;
+			    left: -26px;
+			    top: calc(50% - 14px);
+			    border: 14px solid transparent;
+			    border-right: 14px solid #F2F2F2;
+			}
+	.b-1-bottom{
+		font-size: 28px;
+		line-height: 40px;
+		max-width: 1050px;
+		text-align: center;
+		margin: 120px auto 68px auto;
+	}
 
 .b-2{
 	padding-top: 90px;
@@ -1019,7 +1095,7 @@ body{
 	    margin-bottom: 50px;
 	}
 	.b-1 {
-	    margin-top: 70px;
+
 	}
 	.b-2 {
 	    padding-top: 70px;
@@ -1184,7 +1260,7 @@ body{
 	}
 
 	.b-1 {
-	    margin-top: 50px;
+		padding-top: 60px;
 	}
 	.b-2 {
 	    padding-top: 50px;
@@ -1196,6 +1272,13 @@ body{
 	.b-contacts {
 	    padding-top: 50px;
 	    margin-bottom: 50px;
+	}
+
+	.b-1-bottom {
+	    font-size: 20px;
+	    line-height: 28px;
+	    text-align: left;
+	    margin: 60px auto 0px auto;
 	}
 
 	.b-4-right-item{
@@ -1305,10 +1388,6 @@ body{
 	}
 	.b-contacts-left h2 {
 	    margin-bottom: 30px;
-	}
-
-	.b-1-cont h2 {
-	    padding: 208px 20px 253px;
 	}
 
 	.fancybox-slide{
