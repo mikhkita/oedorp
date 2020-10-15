@@ -1410,6 +1410,7 @@ body{
 	    padding: 16px 12px;
 	}
 	.b-1-years:before {
+		top: 100px;
 	    left: 26px;
 	    height: 70%;
 	}
